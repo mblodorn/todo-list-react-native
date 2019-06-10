@@ -1,19 +1,23 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import styled from "styled-components";
 
-export default function App() {
+import TodoList from "./src/components/templates/todo-list";
+
+const Container = styled.View`
+  flex: 1;
+  background-color: #071013;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <Container>
+      <TodoList />
+    </Container>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
