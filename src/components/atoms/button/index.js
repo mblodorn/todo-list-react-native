@@ -6,7 +6,7 @@ const Container = styled.TouchableOpacity`
   width: 192px;
   padding: 8px 8px 8px 8px;
   border-radius: 32px;
-  border: solid 2px white;
+  background-color:  #FF8811;
   ${props => (props.marginTop ? `margin-top: ${props.marginTop}px;` : "")}
   ${props => (props.marginLeft ? `margin-left: ${props.marginLeft}px;` : "")}
   ${props =>

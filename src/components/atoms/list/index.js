@@ -3,7 +3,8 @@ import React from "react";
 import styled from "styled-components";
 
 const List = styled.ScrollView`
-  padding: 16px 0px 16px 0px;
+width: 100%;
+  padding: 16px 32px 16px 32px;
   ${props => (props.marginTop ? `margin-top: ${props.marginTop}px;` : "")}
   ${props => (props.marginLeft ? `margin-left: ${props.marginLeft}px;` : "")}
   ${props =>

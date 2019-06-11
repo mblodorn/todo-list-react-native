@@ -6,7 +6,7 @@ import TodoList from "./src/components/templates/todo-list";
 
 const Container = styled.View`
   flex: 1;
-  background-color: #071013;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;

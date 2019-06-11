@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import styled from "styled-components";
 
 import Title from "../../atoms/title";
@@ -9,9 +9,9 @@ import Card from "../../atoms/card";
 import List from "../../atoms/list";
 
 const Container = styled.View`
-  flex: 1;
-  padding: 64px 16px 16px 16px;
+  padding: 64px 16px 0px 16px;
   width: 100%;
+  background-color: #56666b;
 `;
 
 const TodoList = () => {
@@ -31,22 +31,28 @@ const TodoList = () => {
   };
 
   return (
-    <Container>
-      <Title textAlign="center" alignSelf="center" marginBottom={64}>
-        Todo List
-      </Title>
+    <Fragment>
+      <Container>
+        <Title textAlign="center" alignSelf="center" marginBottom={64}>
+          Todo List
+        </Title>
 
-      <Input
-        value={todoText}
-        onChangeText={setTodoText}
-        alignSelf="center"
-        placeholder="What do you need to do?"
-      />
-      <Button marginTop={16} alignSelf="center" onPress={onAdd}>
-        Add
-      </Button>
-
-      <List marginTop={16}>
+        <Input
+          value={todoText}
+          onChangeText={setTodoText}
+          alignSelf="center"
+          placeholder="What do you need to do?"
+        />
+        <Button
+          marginTop={16}
+          marginBottom={-16}
+          alignSelf="center"
+          onPress={onAdd}
+        >
+          Add
+        </Button>
+      </Container>
+      <List marginTop={32}>
         {todoItems.map((todoItem, index) => {
           return (
             <Card
@@ -59,7 +65,7 @@ const TodoList = () => {
           );
         })}
       </List>
-    </Container>
+    </Fragment>
   );
 };
 export default TodoList;
